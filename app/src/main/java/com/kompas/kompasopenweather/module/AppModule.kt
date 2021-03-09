@@ -12,7 +12,6 @@ import javax.inject.Singleton
 @Module
 @InstallIn(ApplicationComponent::class)
 class AppModule {
-
     @Provides
     @Singleton
     fun getBaseUrl(): String = "http://api.openweathermap.org/data/2.5/"

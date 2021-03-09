@@ -35,6 +35,4 @@ class WeatherViewModel @ViewModelInject constructor(private val weatherRepositor
                 }
         }
     }
-
-
 }

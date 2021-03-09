@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 Glide.with(this)
                     .load(R.drawable.clouds)
                     .into(binding.image)
-            } else
+            } else {
                 if (response.weather[0].description == "haze" || response.weather[0].description == "overcast clouds" || response.weather[0].description == "fog") {
                     Glide.with(this)
                         .load(R.drawable.haze)
@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
                             .into(binding.image)
                     }
                 }
+            }
 
             val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm aa", Locale.getDefault())
             val updated = "Last Updated at " + sdf.format(Date())
