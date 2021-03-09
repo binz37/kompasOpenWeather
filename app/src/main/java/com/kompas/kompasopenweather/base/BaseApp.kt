@@ -1,4 +1,4 @@
-package com.kompas.kompasopenweather.container
+package com.kompas.kompasopenweather.base
 
 import android.app.Application
 import com.kompas.kompasopenweather.BuildConfig

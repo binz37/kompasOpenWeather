@@ -5,7 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -36,67 +45,73 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="80dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/tvWeather"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Haze"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:gravity="center"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/clouds"
-                android:layout_marginStart="16dp"/>
+                android:layout_marginStart="16dp"
+                android:src="@drawable/clouds" />
         </LinearLayout>
+
         <TextView
             android:id="@+id/tvTemp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="Haze"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-            android:gravity="center" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="1">
+
             <TextView
                 android:id="@+id/tvTempMin"
-                android:layout_weight="0.5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Min Temp 27'c"
+                android:layout_weight="0.5"
                 android:gravity="center"
+                android:text="Min Temp 27'c"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvTempMax"
-                android:layout_weight="0.5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.5"
                 android:gravity="center"
                 android:text="Max Temp 30'c"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
@@ -135,7 +150,8 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/clouds" />
+                    android:src="@drawable/sunrise"
+                    app:tint="@android:color/holo_orange_light"/>
 
                 <TextView
                     android:id="@+id/tvSunrise"
@@ -180,7 +196,8 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/clouds" />
+                    android:src="@drawable/sunset"
+                    app:tint="@android:color/holo_orange_dark"/>
 
                 <TextView
                     android:id="@+id/tvSunset"
@@ -222,7 +239,8 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/clouds" />
+                    android:src="@drawable/wind"
+                    app:tint="@android:color/holo_blue_bright"/>
 
                 <TextView
                     android:id="@+id/tvWind"
@@ -267,7 +285,8 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/clouds" />
+                    android:src="@drawable/gauge"
+                    app:tint="@android:color/darker_gray"/>
 
                 <TextView
                     android:id="@+id/tvPressure"
@@ -312,7 +331,8 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/clouds" />
+                    android:src="@drawable/humidity"
+                    app:tint="@android:color/holo_purple"/>
 
                 <TextView
                     android:id="@+id/tvHumidity"
@@ -357,7 +377,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/clouds" />
+                    android:src="@drawable/user" />
 
                 <TextView
                     android:layout_width="match_parent"
