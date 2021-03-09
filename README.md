@@ -1,7 +1,8 @@
 # kompasOpenWeather
-This app is created as a skill proven for position of Android Developer on Kompas
+This app is created as a skill proven for position of Android Developer on Kompas.
+Kompas Open Weather loads information from https://openweathermap.org/ API to show weather in selected city.
 
-library used in this app :
+This app Including:
 - ViewModel
 - LiveData
 - Hilt (for dependency injection)
